@@ -1,0 +1,41 @@
+import React, {Component} from 'react';
+import {StyleSheet, View, Text} from 'react-native';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+class App extends Component {
+  render() {
+    return (
+      <View style={styles.MainView}>
+        <AntDesign name="forward" size={25} color="green" />
+        <Entypo
+          name="app-store"
+          size={35}
+          color="red"
+          style={{
+            alignSelf: 'flex-start',
+            backgroundColor: '#000000',
+            width: 200,
+            height: 300,
+          }}
+        />
+        <FontAwesome
+          name="flash"
+          size={40}
+          onPress={() => alert('Icon Pressed')}
+        />
+        <Text>React Native</Text>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  MainView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default App;
